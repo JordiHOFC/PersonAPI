@@ -12,6 +12,11 @@ Utiliza-se as tradicionais operações de POST,GET,PUT,DELETE E O PATCH.
 
 
 Aprendendo a criar uma API, Com spring boot e spring data, para gerencia de pessoas.
+### Anotacao projeto lombok
+* *@Data*: Esta anotação gera as referencias dos get's e set's das classes 
+* *@Builder*: Esta anotação  gera o padrao de projeto para instancia de objetos
+* *@AllArgsConstructor*: Esta anotação gerar os construtores com todos argumentos
+* *@NoArgsConstructor*: Esta anotação gerar os construtores sem argumentos
 
 Para informar que vamos fazer um acesso via HTTP devemos ter uma classe controller
 e utilizar a anotação: *@RestController*.
