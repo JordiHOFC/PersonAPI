@@ -7,6 +7,7 @@ import digital.innovationone.personapi.dto.request.PhoneDTO.PhoneDTOBuilder;
 import digital.innovationone.personapi.entity.Person;
 import digital.innovationone.personapi.entity.Person.PersonBuilder;
 import digital.innovationone.personapi.entity.Phone;
+import digital.innovationone.personapi.entity.Phone.PhoneBuilder;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-12-20T15:56:10-0300",
+    date = "2020-12-20T17:58:31-0300",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 11.0.9.1 (Oracle Corporation)"
 )
 public class PersonMapperImpl implements PersonMapper {
@@ -37,6 +38,7 @@ public class PersonMapperImpl implements PersonMapper {
         person.firstName( personDTO.getFirstName() );
         person.lastName( personDTO.getLastName() );
         person.cpf( personDTO.getCpf() );
+        person.phones( phoneDTOListToPhoneList( personDTO.getPhones() ) );
 
         return person.build();
     }
@@ -59,6 +61,35 @@ public class PersonMapperImpl implements PersonMapper {
         personDTO.phones( phoneListToPhoneDTOList( person.getPhones() ) );
 
         return personDTO.build();
+    }
+
+    protected Phone phoneDTOToPhone(PhoneDTO phoneDTO) {
+        if ( phoneDTO == null ) {
+            return null;
+        }
+
+        PhoneBuilder phone = Phone.builder();
+
+        if ( phoneDTO.getId() != null ) {
+            phone.id( phoneDTO.getId() );
+        }
+        phone.type( phoneDTO.getType() );
+        phone.number( phoneDTO.getNumber() );
+
+        return phone.build();
+    }
+
+    protected List<Phone> phoneDTOListToPhoneList(List<PhoneDTO> list) {
+        if ( list == null ) {
+            return null;
+        }
+
+        List<Phone> list1 = new ArrayList<Phone>( list.size() );
+        for ( PhoneDTO phoneDTO : list ) {
+            list1.add( phoneDTOToPhone( phoneDTO ) );
+        }
+
+        return list1;
     }
 
     protected PhoneDTO phoneToPhoneDTO(Phone phone) {
