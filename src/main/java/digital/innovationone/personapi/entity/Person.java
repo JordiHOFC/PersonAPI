@@ -16,7 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 
-public class person {
+public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -29,6 +29,6 @@ public class person {
     @Column(nullable = false)
     private LocalDate birthDate;
     @OneToMany(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REMOVE})
-    private List<phone> phones = new ArrayList<>();
+    private List<Phone> Phones = new ArrayList<>();
 
 }

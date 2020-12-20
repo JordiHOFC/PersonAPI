@@ -4,15 +4,15 @@ import lombok.Builder;
 import lombok.Getter;
 
 @Getter
-@Builder
 
-public enum phoneType {
+
+public enum PhoneType {
     HOME("Home"),
     MOBILE("Mobile"),
     COMMERCIAL("Commercial");
     private final String description;
 
-    phoneType(String description) {
+    PhoneType(String description) {
         this.description = description;
     }
 }
