@@ -1,10 +1,11 @@
 package digital.innovationone.personapi.enums;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 
 @Getter
-
+@AllArgsConstructor
 
 public enum PhoneType {
     HOME("Home"),
@@ -12,7 +13,5 @@ public enum PhoneType {
     COMMERCIAL("Commercial");
     private final String description;
 
-    PhoneType(String description) {
-        this.description = description;
-    }
+
 }
