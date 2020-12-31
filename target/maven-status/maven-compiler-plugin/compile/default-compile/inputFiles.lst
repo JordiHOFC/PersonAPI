@@ -1,3 +1,4 @@
+/home/jordi/Documentos/PersonAPI/src/main/java/digital/innovationone/personapi/exception/PersonNotFoundException.java
 /home/jordi/Documentos/PersonAPI/src/main/java/digital/innovationone/personapi/PersonApiApplication.java
 /home/jordi/Documentos/PersonAPI/src/main/java/digital/innovationone/personapi/entity/Person.java
 /home/jordi/Documentos/PersonAPI/src/main/java/digital/innovationone/personapi/repository/PersonRepository.java
@@ -7,4 +8,5 @@
 /home/jordi/Documentos/PersonAPI/src/main/java/digital/innovationone/personapi/dto/request/PhoneDTO.java
 /home/jordi/Documentos/PersonAPI/src/main/java/digital/innovationone/personapi/entity/Phone.java
 /home/jordi/Documentos/PersonAPI/src/main/java/digital/innovationone/personapi/enums/PhoneType.java
+/home/jordi/Documentos/PersonAPI/src/main/java/digital/innovationone/personapi/mapper/PersonMapper.java
 /home/jordi/Documentos/PersonAPI/src/main/java/digital/innovationone/personapi/service/PersonService.java
